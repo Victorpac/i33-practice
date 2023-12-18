@@ -1,0 +1,13 @@
+:root {
+  --color-grey: #2c2c2c;
+  --color-orange: #ff6309;
+
+  --root-font-size: 20px;
+
+  --text-size-title: 100px;
+  --text-size-quote-author: 45px;
+  --text-size-xlarge: 60px;
+  --text-size-large: 30px;
+  --text-size-normal: 20px;
+  --text-size-small: 16px;
+}

@@ -1,0 +1,25 @@
+header {
+  background-color: var(--color-grey);
+}
+
+header .container * {
+  display: inline-block;
+}
+
+.logo img {
+  height: 3rem;
+}
+
+.nav-menu__item {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+.search-form__button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}

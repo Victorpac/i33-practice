@@ -13,11 +13,13 @@
   <meta property="og:image" content="">
 
   <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="shortcut icon" href="./img/icons/favicon.png" type="image/x-icon">
   <!-- Place favicon.ico in the root directory -->
 
+  <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -26,8 +28,10 @@
 
   <header>
     <div class="container">
-      <h1 class="nav-bar__logo">
-        <a></a>
+      <h1 class="logo">
+        <a href="#">
+          <img src="./img/icons/logo.png" alt="logo" class="logo__image">
+        </a>
       </h1>
       <nav>
         <ul class="nav-menu">
@@ -37,9 +41,11 @@
           <li class="nav-menu__item">About</li>
           <li class="nav-menu__item">Contact</li>
         </ul>
-        <form action="">
-          <input type="text" class="nav-menu__search-field">
-          <input type="submit" class="nav-menu__search-button">
+        <form action="" class="nav-menu__search-form search-form">
+          <input type="text" class="search-form__field hidden">
+          <button class="search-form__button">
+            <img src="./img/icons/search-icon.png" alt="search icon">
+          </button>
         </form>
       </nav>
     </div>
@@ -48,8 +54,8 @@
   <main>
     <div class="banner-title banner">
       <div class="container">
-        <h1 class="banner-title__title">Title Here</h1>
-        <p class="banner-title__description">
+        <h1 class="banner__title">Title Here</h1>
+        <p class="banner__description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Vivamus euismod magna eu lobortis euismod
         </p>
@@ -59,9 +65,28 @@
       </div>
     </div>
 
-    <div class="banner-danceTour">
+    <div class="banner banner-dance-tour">
       <div class="container">
-
+        <h1 class="banner__title">Title Here</h1>
+        <p class="banner__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vivamus euismod magna eu lobortis euismod
+        </p>
+        <article class="article">
+          <img src="./img/image-2__small.png" alt="Article title" class="article__image">
+          <h1 class="article__title">America</h1>
+          <p class="article__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article class="article">
+          <img src="./img/image-1__small.png" alt="Article title" class="article__image">
+          <h1 class="article__title">Asia</h1>
+          <p class="article__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article class="article">
+          <img src="./img/image-3__small.png" alt="Article title" class="article__image">
+          <h1 class="article__title">Australia</h1>
+          <p class="article__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
       </div>
     </div>
   </main>

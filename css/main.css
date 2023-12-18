@@ -11,9 +11,13 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+:root {
+  font-size: var(--root-font-size);
+}
+
 html {
   color: #222;
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 1.4;
 }
 
@@ -86,6 +90,18 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+body {
+  background-color: #ff6309;
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: auto;
+}
+
+
 
 /* ==========================================================================
    Helper classes
@@ -260,8 +276,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
-body {
-  background-color: #ff6309;
-}
-
