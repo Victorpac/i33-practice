@@ -6,8 +6,25 @@ header .container * {
   display: inline-block;
 }
 
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 1rem 0;
+}
+
 .logo img {
   height: 3rem;
+}
+
+header nav > .nav-menu {
+  width: 550px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
 }
 
 .nav-menu__item {
@@ -18,8 +35,57 @@ header .container * {
   font-size: 1rem;
 }
 
+.nav-menu__item > a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu__item > a:hover {
+  color: #aaa;
+  position: relative;
+}
+
+.nav-menu__item > a:hover::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #aaa;
+  display: block;
+  position: absolute;
+}
+
+.search-form {
+  position: relative;
+}
+
+.search-form .search-form__field {
+  display: none;
+  padding: 8px 15px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  color: #555;
+  font-size: 0.7rem;
+  font-family: sans-serif;
+  position: absolute;
+  right: 2rem;
+}
+
+.search-form:hover > .search-form__field {
+  display: inline-block;
+}
+
 .search-form__button {
   background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
+}
+
+.search-form__button img {
+  height: 1.5rem;
+}
+
+.search-form__button:hover img {
+  filter: brightness(0.68);
 }
