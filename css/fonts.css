@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "NewsGothicBT";
+    src: url("../fonts/NewsGothicBT/NewsGothicBT.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "NewsGothicBoldBT";
+  src: url("../fonts/NewsGothicBT/NewsGothicBoldBT.ttf");
+  font-weight: 900;
+  font-size: 18px;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AlternateGothic";
+  src: url("../fonts/Alternate_Gothic/AlternateGotNo3D.ttf");
+  font-weight: 900;
+  font-size: 16px;
+  font-style: normal;
+}

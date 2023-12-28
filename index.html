@@ -16,6 +16,7 @@
   <link rel="shortcut icon" href="./img/icons/favicon.png" type="image/x-icon">
   <!-- Place favicon.ico in the root directory -->
 
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -43,7 +44,8 @@
         </ul>
       </nav>
       <form action="" class="nav-menu__search-form search-form">
-        <input type="text" class="search-form__field">
+        <label class="sr-only" for="navigationSearch">Search</label>
+        <input type="text" id="navigationSearch" class="search-form__field">
         <button class="search-form__button">
           <img src="./img/icons/search-icon.png" alt="search icon">
         </button>
@@ -52,41 +54,41 @@
   </header>
 
   <main>
-    <div class="banner-title banner">
+    <div class="banner-title">
       <div class="container">
         <h1 class="banner__title">Title Here</h1>
         <p class="banner__description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Vivamus euismod magna eu lobortis euismod
+          Vivamus lacinia odio vitae vestibulum vestibulum.
         </p>
-        <form action="">
-          <input class="banner-title__button" type="submit"></input>
-        </form>
+        <a href="#" class="banner-title__button">Register now</a>
       </div>
     </div>
 
     <div class="banner banner-dance-tour">
       <div class="container">
-        <h1 class="banner__title">Title Here</h1>
-        <p class="banner__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Vivamus euismod magna eu lobortis euismod
-        </p>
-        <article class="article">
-          <img src="./img/image-2__small.png" alt="Article title" class="article__image">
-          <h1 class="article__title">America</h1>
-          <p class="article__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </article>
-        <article class="article">
-          <img src="./img/image-1__small.png" alt="Article title" class="article__image">
-          <h1 class="article__title">Asia</h1>
-          <p class="article__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </article>
-        <article class="article">
-          <img src="./img/image-3__small.png" alt="Article title" class="article__image">
-          <h1 class="article__title">Australia</h1>
-          <p class="article__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </article>
+        <h1 class="banner__title">Dance Tour</h1>
+        <div class="banner__description">
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+        </div>
+        <div class="article-showcase">
+          <article class="article-showcase__item">
+            <img src="./img/image-2__small.png" alt="Article title" class="article-showcase__image">
+            <h1 class="article-showcase__title">America</h1>
+            <p class="article-showcase__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </article>
+          <article class="article-showcase__item">
+            <img src="./img/image-1__small.png" alt="Article title" class="article-showcase__image">
+            <h1 class="article-showcase__title">Asia</h1>
+            <p class="article-showcase__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </article>
+          <article class="article-showcase__item">
+            <img src="./img/image-3__small.png" alt="Article title" class="article-showcase__image">
+            <h1 class="article-showcase__title">Australia</h1>
+            <p class="article-showcase__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </article>
+        </div>
       </div>
     </div>
   </main>
