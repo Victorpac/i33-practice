@@ -13,11 +13,11 @@ header .container {
 }
 
 .logo {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 .logo img {
-  height: 3rem;
+  height: 6rem;
 }
 
 header nav > .nav-menu {
@@ -31,8 +31,7 @@ header nav > .nav-menu {
   color: white;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 .nav-menu__item > a {
@@ -41,7 +40,7 @@ header nav > .nav-menu {
 }
 
 .nav-menu__item > a:hover {
-  color: #aaa;
+  color: var(--color-link-hover);
   position: relative;
 }
 
@@ -64,11 +63,11 @@ header nav > .nav-menu {
   border-radius: 30px;
   border: none;
   outline: none;
-  color: #555;
+  color: #555555;
   font-size: 0.7rem;
   font-family: sans-serif;
   position: absolute;
-  right: 2rem;
+  right: 4rem;
 }
 
 .search-form:hover > .search-form__field {
@@ -83,7 +82,7 @@ header nav > .nav-menu {
 }
 
 .search-form__button img {
-  height: 1.5rem;
+  height: 3rem;
 }
 
 .search-form__button:hover img {

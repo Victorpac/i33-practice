@@ -14,7 +14,6 @@
 html {
   color: #222;
   font-size: 62.5%;
-  line-height: 1.4;
 }
 
 /*
@@ -86,22 +85,63 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+::-webkit-scrollbar {
+  width: 0px; /* Ширина scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Цвет фона track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Цвет ползунка scrollbar */
+  border-radius: 5px;
+}
+
+/* Дополнительные стили для Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
 
 * {
   padding: 0;
   margin: 0;
 }
-
 body {
   background-color: #ff6309;
   color: #fff;
-  font-family: NewsGothicBT;
+  font-size: 2rem;
+  font-family: NewsGothicBT, sans-serif;
 }
-
 .container {
   max-width: 1300px;
   width: 100%;
   margin: auto;
+}
+.button {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2.5rem;
+  border-radius: 5px;
+  display: block;
+  width: 322px;
+  height: var(--button-default-height);
+  line-height: var(--button-default-height);
+  text-align: center;
+}
+.title {
+  text-transform: uppercase;
+  color: white;
+  font-size: 6rem;
+  text-align: unset;
+  font-weight: bolder;
+  font-style: normal;
+}
+main {
+  overflow: hidden;
 }
 
 
@@ -113,31 +153,19 @@ body {
   height: calc(100vh - 100px);
 }
 .banner-title .banner__title {
-  font-size: 5rem;
-  padding-top: 33.75vh;
-  text-align: inherit;
-  text-transform: inherit;
-  font-weight: bold;
-  font-style: inherit;
-  font-family: inherit;
+  font-size: 14rem;
+  padding-top: 33vh;
+  text-transform: none;
+  font-family: AlternateGothic, sans-serif;
 }
 .banner__description {
   padding: 0 0 40px;
-  max-width: 600px;
+  max-width:580px;
   letter-spacing: 1px;
-  font-size: 1.3rem;
+  font-size: 2.5rem;
 }
 .banner-title__button {
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.25rem;
   background-color: var(--color-orange);
-  padding: 20px 80px;
-  border-radius: 5px;
-  display: block;
-  width: fit-content;
 }
 
 /* Dance Tour */
@@ -145,8 +173,8 @@ body {
   overflow: hidden;
   position: relative;
 }
-.banner-dance-tour:before {
-  content: url("../img/background-chape__black.png");
+.tour-offers::before {
+  content: url("../img/background-shape__black.png");
   position: absolute;
   left: -590px;
   top: -430px;
@@ -156,41 +184,226 @@ body {
   text-align: center;
 }
 .banner .banner__title {
-  text-transform: uppercase;
-  font-weight: bolder;
-  font-size: 4rem;
-  margin-top: 70px;
-  font-family: AlternateGothic;
+  font-size: 8rem;
+  margin-top: 80px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
-
 .banner .banner__description {
   max-width: none;
   padding: 32px 0 80px;
 }
-
 .banner .banner__description > p {
   width: 830px;
   margin: auto;
 }
-
 .article-showcase {
   display: flex;
   justify-content: space-between;
   margin-bottom: 100px;
 }
-
 .article-showcase__item {
   background-color: var(--color-grey);
   width: min-content;
 }
-
 .article-showcase__title {
   padding-top: 30px;
+  font-family: AlternateGothic, sans-serif;
+  font-size: 5rem;
+}
+.article-showcase__description {
+  padding: 10px 20px 30px;
+}
+
+/* Pricing banner */
+.banner-pricing {
+  background-color: var(--color-grey);
+}
+.banner-pricing::before {
+  content: url("../img/background-shape__white-1.png");
+  position: absolute;
+  left: -310px;
+  top: -435px;
+  opacity: 0.3;
+}
+.banner-pricing .article-showcase__item {
+  flex: 0 0 372px;
+  background-color: var(--color-orange);
+  padding: 60px 30px 25px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.article-showcase__button {
+  background-color: var(--color-grey);
+}
+.background-shape-white {
+  position: relative;
+}
+.background-shape-white__content {
+  position: absolute;
+  opacity: 0.3;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  transform: translate(270px, -640px);
+}
+
+
+
+/* Our Offers */
+.our-staff__item:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+.our-staff__item {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.our-staff__item-image {
+  height: 100vh;
+  width: 50vw;
+  display: flex;
+}
+.our-staff__item-image img {
+  width: inherit;
+  height: fit-content;
+  align-self: center;
+}
+.our-staff__item .item-description {
+  display: flex;
+  align-items: center;
+}
+.our-staff__item .item-description__content {
+  max-inline-size: 81.94444%;
+  margin: auto;
+  padding-inline-start: 20px;
+}
+.item-description__title {
+  font-family: NewsGothicBT, sans-serif;
+}
+.item-description__text {
+  font-size: 3.5rem;
+  padding-block-start: 4rem;
+  padding-block-end: 7rem;
+}
+.our-staff__item .item-description__button {
+  background-color: var(--color-grey);
+}
+.our-staff__item::after {
+  content: url("../img/background-shape__white-2.png");
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+  transform: translate(220px, 550px) scale(0.8);
+}
+.our-staff__item:nth-child(2n)::after {
+  right: auto;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  transform: translate(-240px, 540px) scaleX(-0.8) scaleY(0.8);;
+}
+
+/* Statistics */
+.banner.statistic {
+  background-color: var(--color-grey);
+  height: 100vh;
+}
+.statistic .banner__title {
+  margin-block-start: 15vh;
+}
+.statistic .banner__description {
+  padding-block-start: 7vh;
+  padding-block-end: 7vh;
+}
+.statistic__content {
+  display: flex;
+  justify-content: space-between;
+  height: 35vh;
+  align-items: center;
+}
+.statistic__mark {
+  font-family: "OpenSans", sans-serif;
+}
+.statistic__title {
+  font-size: 3rem;
+}
+
+
+/* Quotation */
+.quotation {
+  background-image: url("../img/image-3__red-large.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quotation__content {
+  width: 65vw;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.quote__text {
+  font-size: 4.5rem;
+  padding-bottom: 8.75vh;
+}
+.quote__author {
+  font-size: 5rem;
+  font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
 }
 
-.article-showcase__description {
-  padding: 10px 20px 30px;
+
+
+/* Subscribe */
+.subscribe {
+  height: 70vh;
+}
+.subscribe::before, .subscribe::after  {
+  content: url("../img/background-shape__black.png");
+  position: absolute;
+  z-index: -1;
+}
+.subscribe::before {
+  transform: translate(-530px, -260px) rotate(-45deg);
+  left: 0;
+}
+.subscribe::after {
+  transform: translate(520px, -790px) rotate(135deg);;
+  right: 0;
+}
+.subscribe .banner__description {
+  padding: 0;
+  font-size: 3rem;
+  padding-block-start: 7vh;
+  padding-block-end: 10vh;
+}
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+}
+.subscribe-form > * {
+  outline: none;
+  border: none;
+}
+.subscribe-form__field {
+  height: var(--button-default-height);
+  padding: 0 25px;
+  font-size: 2.2rem;
+  width: 500px;
+  color: #808080;
+}
+.subscribe-form__send-button {
+  background-color: var(--color-grey);
+  width: 222px;
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
 }
 
 /* ==========================================================================

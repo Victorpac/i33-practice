@@ -6,17 +6,22 @@
 }
 
 @font-face {
-  font-family: "NewsGothicBoldBT";
-  src: url("../fonts/NewsGothicBT/NewsGothicBoldBT.ttf");
+  font-family: "AlternateGothic";
+  src: url("../fonts/Alternate_Gothic/AlternateGotNo3D.ttf");
   font-weight: 900;
-  font-size: 18px;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "AlternateGothic";
-  src: url("../fonts/Alternate_Gothic/AlternateGotNo3D.ttf");
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../fonts/Roboto Condensed/RobotoCondensed-VariableFont_wght.ttf");
   font-weight: 900;
-  font-size: 16px;
   font-style: normal;
 }
