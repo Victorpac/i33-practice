@@ -88,3 +88,34 @@ header nav > .nav-menu {
 .search-form__button:hover img {
   filter: brightness(0.68);
 }
+
+#header .burger-menu-button {
+  position: relative;
+  display: none;
+}
+.burger-menu-button > div {
+  height: 4px;
+  width: 30px;
+  border: none;
+  border-radius: 2px;
+  background-color: white;
+  margin: 7px;
+  display: block;
+  transition: all .3s;
+}
+
+.burger-menu-button[data-is-active="true"] > div:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+.burger-menu-button[data-is-active="true"] > div:nth-child(2) {
+  transform: rotate(-45deg) translate(3px, -4px);
+}
+
+@media (max-width: 799px) {
+  header nav > .nav-menu {
+    display: none;
+  }
+  #header .burger-menu-button {
+    display: inline-block;
+  }
+}

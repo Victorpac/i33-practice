@@ -22,13 +22,14 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/media.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 
-  <header>
+  <header id="header" data-is-active="false">
     <div class="container">
       <a href="#" class="logo">
         <img src="./img/icons/logo.png" alt="logo" class="logo__image">
@@ -49,6 +50,10 @@
           <img src="./img/icons/search-icon.png" alt="search icon">
         </button>
       </form>
+      <div class="burger-menu-button" data-is-active="false" id="openMenuButton">
+        <div></div>
+        <div></div>
+      </div>
     </div>
   </header>
 
@@ -207,7 +212,7 @@
     </div>
   </main>
 
-  <footer class="footer">
+  <footer id="footer">
     <div class="container">
       <div class="footer-item">
         <h4 class="footer-item__header">musicology</h4>
@@ -270,7 +275,7 @@
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

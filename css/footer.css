@@ -1,10 +1,10 @@
-.footer {
+#footer {
   color: white;
   background-color: var(--color-grey);
   padding-block-start: 100px;
   padding-block-end: 80px;
 }
-.footer .container {
+#footer .container {
   display: grid;
   grid-template-columns: 2.5fr repeat(3, 1fr);
   grid-column-gap: 20px;

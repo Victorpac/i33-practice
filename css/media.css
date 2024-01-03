@@ -66,3 +66,17 @@
     page-break-after: avoid;
   }
 }
+
+/* Tablet */
+@media (max-width: 1400px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+/* Small tablet */
+@media (max-width: 799px) {
+  .container {
+    max-width: 700px;
+  }
+}
