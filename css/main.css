@@ -260,7 +260,7 @@ main {
   overflow: hidden;
 }
 .our-staff__item-image {
-  height: 100vh;
+  height: inherit;
   width: 50vw;
   display: flex;
 }

@@ -79,4 +79,44 @@
   .container {
     max-width: 700px;
   }
+
+  .banner .banner__description > p {
+    width: 640px;
+  }
+
+  .article-showcase {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .article-showcase__item {
+    margin: 40px 0;
+  }
+
+  .our-staff__item {
+    height: 80vh;
+  }
+
+  .statistic .banner__title {
+    margin-block-start: 12vh;
+  }
+
+  .statistic .banner__description {
+    padding-block-start: 4vh;
+    padding-block-end: 7vh;
+  }
+
+  .statistic__content {
+    flex-direction: column;
+  }
+
+  .content__item {
+    margin: 40px;
+  }
+}
+
+@media (max-width: 524px) {
+  .container {
+    max-width: 390px;
+  }
 }

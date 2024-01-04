@@ -155,7 +155,7 @@ header nav > .nav-menu {
     grid-area: 2 / 1 / 8 / 11;
     display: block;
   }
-  #header[data-is-active="true"] .search-form{
+  #header[data-is-active="true"] .search-form {
     display: block;
   }
   #header[data-is-active="true"] .search-form {
@@ -179,5 +179,32 @@ header nav > .nav-menu {
 
   #header[data-is-active="true"] .burger-menu-button {
     grid-area: 1 / 10 / 1 / 10;
+  }
+}
+
+@media (max-width: 524px) {
+  header[data-is-active="true"] .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #header[data-is-active="true"] nav {
+    margin-block-start: 40px;
+    margin-block-end: 40px;
+  }
+
+  #header[data-is-active="true"] .nav-menu__item {
+    padding: 15px 0;
+  }
+
+  #header[data-is-active="true"] .search-form[data-is-active="true"] .search-form__field {
+    width: 70vw;
+    margin-block-end: 50px;
+  }
+
+  #header[data-is-active="true"] .burger-menu-button {
+    position: absolute;
+    top: 30px;
+    right: 20px;
   }
 }
