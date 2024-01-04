@@ -133,7 +133,9 @@ header nav > .nav-menu {
     display: inline-block;
   }
   #header[data-is-active="true"] {
-    position: relative;
+    position: absolute;
+    width: 100%;
+    top: 0;
   }
   #header[data-is-active="true"] .logo {
     grid-area: 1 / 1 / 1 / 6;

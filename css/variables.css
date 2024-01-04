@@ -3,5 +3,15 @@
   --color-orange: #ff6309;
   --color-link-hover: #aaaaaa;
 
-  --button-default-height: 65px;
+  --font-size-default: 62.5%;
+
+  --height-button-default: 65px;
+  --width-button-default: 322px;
+}
+
+@media (max-width: 799px) {
+  :root {
+    --height-button-default: 45px;
+    --width-button-default: 222px;
+  }
 }
