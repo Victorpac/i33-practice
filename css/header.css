@@ -60,9 +60,9 @@ header nav > .nav-menu {
 .search-form[data-is-active="true"] .search-form__field {
   display: inline-block;
 }
-.search-form[data-is-active="true"] .search-form__button {
-  display: none;
-}
+/*.search-form[data-is-active="true"] .search-form__button {*/
+/*  display: none;*/
+/*}*/
 
 .search-form .search-form__field {
   display: none;
@@ -71,14 +71,10 @@ header nav > .nav-menu {
   border: none;
   outline: none;
   color: #555555;
-  font-size: 0.7rem;
+  font-size: 1.5rem;
   font-family: sans-serif;
   position: absolute;
   right: 4rem;
-}
-
-.search-form:hover > .search-form__field {
-  display: inline-block;
 }
 
 .search-form__button {

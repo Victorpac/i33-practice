@@ -206,6 +206,9 @@ main {
   background-color: var(--color-grey);
   width: min-content;
 }
+.article-showcase__item:hover {
+  transform: scale(1.05);
+}
 .article-showcase__title {
   padding-top: 30px;
   font-family: AlternateGothic, sans-serif;
