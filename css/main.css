@@ -208,6 +208,7 @@ main {
 }
 .article-showcase__item:hover {
   transform: scale(1.05);
+  box-shadow: var(--color-grey) 0 0 40px 15px;
 }
 .article-showcase__title {
   padding-top: 30px;

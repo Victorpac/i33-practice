@@ -173,7 +173,7 @@
   }
 
   .banner-title .banner__title {
-    padding-top: 10vh;
+    padding-top: 25vh;
     padding-block-end: 40px;
     line-height: 1;
   }
@@ -246,17 +246,17 @@
 
 
 /* Height */
-@media (max-height: 949px) {
-  .content__item {
-    margin: 20px 0;
-  }
-  .statistic .banner__description {
-    padding-block-start: 4vh;
-    padding-block-end: 4vh;
-  }
-}
-@media (max-height: 829px) {
-  .banner-title .banner__title {
-    padding-top: 10vh;
-  }
-}
+/*@media (max-height: 949px) {*/
+/*  .content__item {*/
+/*    margin: 20px 0;*/
+/*  }*/
+/*  .statistic .banner__description {*/
+/*    padding-block-start: 4vh;*/
+/*    padding-block-end: 4vh;*/
+/*  }*/
+/*}*/
+/*@media (max-height: 829px) {*/
+/*  .banner-title .banner__title {*/
+/*    padding-top: 10vh;*/
+/*  }*/
+/*}*/
