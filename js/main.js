@@ -3,23 +3,23 @@
 const openMenuButton = document.querySelector("#openMenuButton");
 const searchForm = document.querySelector("#navigationSearchForm")
 const searchFormButton = document.querySelector("#searchFormButton");
+const headerEl = document.querySelector("#header");
 
 openMenuButton.addEventListener("click", openMenu);
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  openSearchField(e);
+  closeOpenSearchField(e);
 });
 // searchFormButton.addEventListener("click", openSearchField);
 
 function openMenu(event) {
-  const headerEl = document.querySelector("#header");
   let isOpenMenuButtonActive = openMenuButton.getAttribute("data-is-active") === "true";
   searchForm.setAttribute("data-is-active", String(!isOpenMenuButtonActive));
   openMenuButton.setAttribute("data-is-active", String(!isOpenMenuButtonActive));
   headerEl.setAttribute("data-is-active", String(!isOpenMenuButtonActive));
 }
 
-function openSearchField(event) {
+function closeOpenSearchField(event) {
   const isFormActive = searchForm.getAttribute("data-is-active") === "true";
   if (isFormActive) {
     searchForm.submit();
@@ -31,53 +31,137 @@ function openSearchField(event) {
 
 const animItems = document.querySelectorAll('._anim-item');
 
+const currentActiveBreakepoints = new Set();
+
+function handleScroll () {
+
+  handleStickyHeader();
+
+  const breakpoints = [];
+  animItems.forEach(item => breakpoints.push(item.offsetTop));
+  const scrollPosition = window.scrollY;
+
+
+  for (const key in breakpoints) {
+    if (scrollPosition >= breakpoints[key]) {
+      if (animItems[key].classList.contains("_anim-item")) {
+        animItems[key].classList.remove("_anim-item");
+      }
+    }
+    // else {
+    //   if (!animItems[key].classList.contains("_anim-item")) {
+    //     animItems[key].classList.add("_anim-item");
+    //   }
+    // }
+  }
+
+  console.log(animItems.length);
+
+
+  function offset(el) {
+    const rect = el.getBoundingClientRect(),
+      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+  }
+}
+
+
+function handleStickyHeader() {
+  if (window.scrollY > headerEl.offsetHeight) {
+    headerEl.style.background = "rgb(0, 0, 0, 0.7)";
+  }else {
+    headerEl.style.background = "";
+  }
+}
+
 // window.addEventListener("scroll", scrollOperator);
 
+// disableScroll();
+//
+// let startScrollPosition = window.scrollY;
+// let isAnimation = false;
+// let currentAnimItem = 0;
+// function scrollOperator(event) {
+//   preventScroll(event);
+//   if (isAnimation) return false;
+//
+//   console.log(event);
+//   isAnimation = true;
+//
+//   const scrollDirection = startScrollPosition < window.scrollY ? "up" : "down";
+//   console.log(scrollDirection);
+//
+//   if ((scrollDirection === "up") && (currentAnimItem > 0)) {
+//     currentAnimItem -= 1;
+//   }else if ( (scrollDirection === "down") && (currentAnimItem < animItems.length) ) {
+//     currentAnimItem += 1;
+//   }
+//
+//   console.log(currentAnimItem);
+//
+//   window.scrollTo(0, animItems[currentAnimItem].offsetTop);
+//
+//   window.addEventListener("scrollend", (e) => {
+//     // enableScroll();
+//     startScrollPosition = window.scrollY;
+//     isAnimation = false;
+//   });
+//
+//   return false;
+// }
+//
+//
+// function scrollAnimationInit(event) {
+//
+// }
+//
+// function preventScroll(e){
+//   e.preventDefault();
+//   e.stopPropagation();
+//
+//   return false;
+// }
+//
+// function disableScroll() {
+//   window.addEventListener('DOMMouseScroll', scrollOperator, {passive: false}); // older FF
+//   window.addEventListener("wheel", scrollOperator, {passive: false}); // modern desktop
+//   window.addEventListener('touchmove', scrollOperator, {passive: false}); // mobile
+// }
 
-let isAnimation = false;
-let currentAnimItem = 0;
-function scrollOperator(event) {
-  console.log("start", isAnimation);
-  if (isAnimation) return;
-
-  disableScroll();
-  isAnimation = true;
-
-  window.scrollTo(0, animItems[currentAnimItem+1].offsetTop);
-
-  window.addEventListener("scrollend", (e) => {
-    console.log("Scroll end");
-    enableScroll();
-    isAnimation = false;
-  });
-  console.log("ed", isAnimation);
-}
+// function enableScroll() {
+//   window.removeEventListener('DOMMouseScroll', preventScroll, {passive: false}); // older FF
+//   window.removeEventListener("wheel", preventScroll, {passive: false}); // modern desktop
+//   window.removeEventListener('touchmove', preventScroll, {passive: false}); // mobile
+//   window.removeEventListener('wheel', preventScroll, {passive: false});
+// }
 
 
-function scrollAnimationInit(event) {
+// const breakpoints = [];
+// animItems.forEach(item => breakpoints.push(item.offsetTop));
+//
+// // Function to handle scroll event
+// function handleScroll() {
+//   const scrollPosition = window.scrollY;
+//
+//   // Loop through breakpoints and check if scroll position has reached them
+//   for (const key in breakpoints) {
+//     if (scrollPosition >= breakpoints[key]) {
+//       console.log('Reached breakpoint ' + key);
+//       // Here you can trigger any action you want
+//       // For example, you could animate an element, load more content, etc.
+//     }
+//   }
+// }
+//
+// // Listen for scroll events
 
-}
+window.addEventListener('scroll', handleScroll);
 
-function preventScroll(e){
-  e.preventDefault();
-  e.stopPropagation();
 
-  return false;
-}
 
-function disableScroll() {
-  window.addEventListener('DOMMouseScroll', preventScroll, {passive: false}); // older FF
-  window.addEventListener("wheel", preventScroll, {passive: false}); // modern desktop
-  window.addEventListener('touchmove', preventScroll, {passive: false}); // mobile
-  window.addEventListener('wheel', preventScroll, {passive: false});
-}
 
-function enableScroll() {
-  window.removeEventListener('DOMMouseScroll', preventScroll, {passive: false}); // older FF
-  window.removeEventListener("wheel", preventScroll, {passive: false}); // modern desktop
-  window.removeEventListener('touchmove', preventScroll, {passive: false}); // mobile
-  window.removeEventListener('wheel', preventScroll, {passive: false});
-}
 
 //
 // const animItem__facts	= document.querySelector('#facts');

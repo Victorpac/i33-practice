@@ -1,3 +1,25 @@
 html {
   scroll-behavior: smooth;
 }
+
+.banner-title._anim-item .banner-title__button {
+  transform: translate(0, 50vh);
+}
+
+.banner-title._anim-item  .banner__title {
+  transform: translate(-200%, 0);
+}
+
+.banner-title._anim-item  .banner__description {
+  transform: scale(0.01);
+}
+
+@keyframes headerAnimation {
+  100% {
+    transform: translate(0, -100%);
+  }
+
+  0% {
+    transform: translate(0, 0);
+  }
+}

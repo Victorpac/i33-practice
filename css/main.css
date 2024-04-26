@@ -107,6 +107,7 @@ html {
 * {
   padding: 0;
   margin: 0;
+  transition: all 1s;
 }
 body {
   background-color: #ff6309;
@@ -131,6 +132,7 @@ body {
   height: var(--height-button-default);
   line-height: var(--height-button-default);
   text-align: center;
+  transition: all 1s;
 }
 .title {
   text-transform: uppercase;
@@ -139,6 +141,7 @@ body {
   text-align: unset;
   font-weight: bolder;
   font-style: normal;
+  transition: all 1s;
 }
 main {
   overflow: hidden;
@@ -157,6 +160,7 @@ main {
   font-size: 14rem;
   padding-top: 33vh;
   text-transform: none;
+  width: fit-content;
   font-family: AlternateGothic, sans-serif;
 }
 .banner__description {
