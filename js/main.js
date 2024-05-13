@@ -1,80 +1,21 @@
 "use strict";
 
-const openMenuButton = document.querySelector("#openMenuButton");
-const searchForm = document.querySelector("#navigationSearchForm")
-const searchFormButton = document.querySelector("#searchFormButton");
-const headerEl = document.querySelector("#header");
+import { Animation }  from "./animations.js";
 
-openMenuButton.addEventListener("click", openMenu);
+const searchForm = document.querySelector("#navigationSearchForm")
+const openMenuButton = document.querySelector("#openMenuButton");
+
+let animations = new Animation();
+
+openMenuButton.addEventListener("click", animations.openNavigationMenu);
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  closeOpenSearchField(e);
+  animations.closeOpenSearchField(e);
 });
 // searchFormButton.addEventListener("click", openSearchField);
 
-function openMenu(event) {
-  let isOpenMenuButtonActive = openMenuButton.getAttribute("data-is-active") === "true";
-  searchForm.setAttribute("data-is-active", String(!isOpenMenuButtonActive));
-  openMenuButton.setAttribute("data-is-active", String(!isOpenMenuButtonActive));
-  headerEl.setAttribute("data-is-active", String(!isOpenMenuButtonActive));
-}
+animations.initAnimations();
 
-function closeOpenSearchField(event) {
-  const isFormActive = searchForm.getAttribute("data-is-active") === "true";
-  if (isFormActive) {
-    searchForm.submit();
-  }else {
-    searchForm.setAttribute("data-is-active", String(!isFormActive));
-    // document.addEventListener("click", (e) => searchForm.setAttribute("data-is-active", "false"));
-  }
-}
-
-const animItems = document.querySelectorAll('._anim-item');
-
-const currentActiveBreakepoints = new Set();
-
-function handleScroll () {
-
-  handleStickyHeader();
-
-  const breakpoints = [];
-  animItems.forEach(item => breakpoints.push(item.offsetTop));
-  const scrollPosition = window.scrollY;
-
-
-  for (const key in breakpoints) {
-    if (scrollPosition >= breakpoints[key]) {
-      if (animItems[key].classList.contains("_anim-item")) {
-        animItems[key].classList.remove("_anim-item");
-      }
-    }
-    // else {
-    //   if (!animItems[key].classList.contains("_anim-item")) {
-    //     animItems[key].classList.add("_anim-item");
-    //   }
-    // }
-  }
-
-  console.log(animItems.length);
-
-
-  function offset(el) {
-    const rect = el.getBoundingClientRect(),
-      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-  }
-}
-
-
-function handleStickyHeader() {
-  if (window.scrollY > headerEl.offsetHeight) {
-    headerEl.style.background = "rgb(0, 0, 0, 0.7)";
-  }else {
-    headerEl.style.background = "";
-  }
-}
 
 // window.addEventListener("scroll", scrollOperator);
 
@@ -156,9 +97,6 @@ function handleStickyHeader() {
 // }
 //
 // // Listen for scroll events
-
-window.addEventListener('scroll', handleScroll);
-
 
 
 
